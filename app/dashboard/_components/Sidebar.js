@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Layout, Shield } from "lucide-react";
-import Image from "next/image";
+import UploadPdfDialog from "./UploadPdfDialog";
+
 import React from "react";
 
 function Sidebar() {
@@ -9,8 +10,9 @@ function Sidebar() {
     <div className="shadow-sm h-screen">
       <img src={"/logo2.svg"} alt="logo" width={170} height={120} />
       <div className="mt-10">
-        <Button className="w-full">+ Upload Pdf</Button>
-
+        <UploadPdfDialog>
+          <Button className="w-full">+ Upload Pdf</Button>
+        </UploadPdfDialog>
         <div className="flex gap-2 items-center mt-5 p-3 hover:bg-slate-100 cursor-pointer rounded-lg">
           <Layout />
           <h2>Workspace</h2>
